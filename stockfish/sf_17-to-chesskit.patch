@@ -1,0 +1,34 @@
+diff --git a/src/main.cpp b/src/_main.cpp
+similarity index 95%
+rename from src/main.cpp
+rename to src/_main.cpp
+index a6a3d1c4e85..f3cf9092423 100644
+--- a/src/main.cpp
++++ b/src/_main.cpp
+@@ -27,7 +27,8 @@
+ 
+ using namespace Stockfish;
+ 
+-int main(int argc, char* argv[]) {
++#include "_main.h"
++int _main(int argc, char* argv[]) {
+ 
+     std::cout << engine_info() << std::endl;
+ 
+diff --git a/src/_main.h b/src/_main.h
+new file mode 100644
+index 00000000000..74283f84c39
+--- /dev/null
++++ b/src/_main.h
+@@ -0,0 +1,11 @@
++//
++//  _main.h
++//  ChessKitEngine/Stockfish
++//
++
++#ifndef _main_h
++#define _main_h
++
++int _main(int argc, char* argv[]);
++
++#endif /* _main_h */
